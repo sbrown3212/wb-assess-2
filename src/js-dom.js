@@ -43,7 +43,13 @@ document.querySelector('#send-alert button').addEventListener('click', (e) => {
 //     <li>Item</li>  <!-- This was added after double-clicking -->
 //   </ol>
 
-/// TODO: replace this with your code
+document.querySelector('#item-adder').addEventListener('dblclick', (e) => {
+    const newItem = document.createElement('li');
+    newItem.innerText = `Item`;
+    document.querySelector('#list').appendChild(newItem);
+})
+
+// Not sure why "add an item" is not passing the test
 
 // Change colors
 //
