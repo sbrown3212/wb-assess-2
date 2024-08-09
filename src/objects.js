@@ -190,7 +190,51 @@ function isBugAvailable(bug, month) {
 //     12: [],
 //   }
 
-function buildBugHuntCalendar(bugs) {}
+function buildBugHuntCalendar(bugs) {
+  // Create empty calendar object
+  const calendar = {};
+
+  // Populate calendar object with elements with keys being number 1 to 12 and values each being an empty array
+  for (let i = 1; i <= 12; i++) {
+    calendar[i] = [];
+  }
+ 
+  // For each bug, iterate through the keys (months) of calendar to see if it is found in available months of that bug
+  // If found, push bug name to month in calendar
+  for (const bug of bugs) {
+    for (const month in calendar) {
+      // console.log(`Bug:`, bug.name)
+      // console.log(`Month:`, month)
+      // console.log(`Months bug is available:`, bug.availability.months)
+      // console.log(`Bug is found:`, bug.availability.months.includes(+month))
+      console.log();
+      if (bug.availability.months.includes(+month)) {
+        calendar[month].push(bug.name);
+      }
+    }
+  }
+  // console.log(calendar)
+  return calendar;
+}
+
+// const bugs = [
+//   {
+//     name: 'peacock butterfly',
+//     availability: {
+//       rarity: 'common',
+//       months: [1, 2, 3],
+//     },
+//   },
+//   {
+//     name: 'yellow butterfly',
+//     availability: {
+//       rarity: 'common',
+//       months: [3],
+//     },
+//   },
+// ];
+
+// buildBugHuntCalendar(bugs)
 
 export {
   buildBugHuntCalendar,
