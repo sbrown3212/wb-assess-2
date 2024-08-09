@@ -114,8 +114,8 @@ function wordCount(str) {
   return wordCountObj;
 }
 
-const str = `hello world`;
-console.log(wordCount)
+// const str = `hello world`;
+// console.log(wordCount)
 
 // Given an object representing a bug, return true if the given bug is
 // available in the given month.
@@ -137,7 +137,17 @@ console.log(wordCount)
 //     }
 //   }, 1);
 //   => true
-function isBugAvailable(bug, month) {}
+function isBugAvailable(bug, month) {
+  return bug.availability.months.includes(month)
+}
+
+// console.log(isBugAvailable({
+//       name: 'common butterfly',
+//       availability: {
+//         rarity: 'common',
+//         months: [9, 10, 11, 12, 1, 2, 3, 4, 5, 6],
+//       }
+//     }, 1))
 
 // Given an array of objects representing bugs, return an object that'll be
 // used to build a calendar. The keys of the object should be the months of the
