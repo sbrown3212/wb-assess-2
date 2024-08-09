@@ -1,4 +1,29 @@
 * {
     color: white;
     background-color: black;
+    font-family: sans-serif;
+}
+
+th,
+td,
+table {
+    border: 1px solid white
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+table {
+    margin-top: 50px;
+}
+
+form * {
+    margin: 7px 2px;
+}
+
+form .white-bg {
+    color: black;
+    background-color: white;
 }

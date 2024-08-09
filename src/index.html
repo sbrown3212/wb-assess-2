@@ -11,20 +11,22 @@
     <form action="">
       <div>
         <label for="char-name">Character Name:</label>
-        <input type="text" name="charName" id="char-name">
+        <input class="white-bg" type="text" name="charName" id="char-name">
       </div>
 
       <div>
         <label for="jedi">Jedi</label>
-        <input type="radio" name="jedi" id="jedi">
+        <!-- <input type="radio" name="jedi" id="jedi"> -->
+         <input type="radio" value="jedi">
 
         <label for="sith">Sith</label>
-        <input type="radio" name="sith" id="sith">
+        <!-- <input type="radio" name="sith" id="sith"> -->
+        <input type="radio" value="sith">
       </div>
 
       <div>
-        <label for="ls-color"></label>
-        <select name="ls-color" id="ls-color">
+        <label for="lightsaber">Lightsaber color:</label>
+        <select class="white-bg" name="lightsaber" id="lightsaber">
           <option value="blue">Blue</option>
           <option value="green">Green</option>
           <option value="red">Red</option>
@@ -33,7 +35,7 @@
       </div>
 
       <div>
-        <input type="submit" value="Submit">
+        <input class="white-bg" type="submit" value="Submit">
       </div>
     </form>
 
