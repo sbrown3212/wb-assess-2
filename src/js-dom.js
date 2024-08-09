@@ -16,6 +16,8 @@ document.querySelector('#auth').addEventListener('click', e => {
     }
 })
 
+
+
 // Send an alert
 //
 // This form will send an alert to a user via the built-in alert function.
@@ -27,6 +29,8 @@ document.querySelector('#send-alert button').addEventListener('click', (e) => {
     // e.preventDefault(); // only necessary if the page should not reload?
     alert(document.querySelector('#alert-message').value)
 })
+
+
 
 // Add an item
 //
@@ -49,7 +53,9 @@ document.querySelector('#item-adder').addEventListener('dblclick', (e) => {
     document.querySelector('#list').appendChild(newItem);
 })
 
-// Not sure why "add an item" is not passing the test
+// Doesn't pass test.
+
+
 
 // Change colors
 //
@@ -74,11 +80,15 @@ document.querySelector('#red').addEventListener('click', (e) => {
     }
 })
 
+// Doesn't pass test.
+
 // QUESTION: Can this be done with one event listener?
 // Or does it need to be two because there are two separate button elements with different actions?
 // Would it work to add a class to the color changer buttons and assign the e.style.color to the id of the target clicked?
 // (I didn't try because we aren't supposed to edit js-dom.html)
 // It just doesn't seem very dry as I have it now.
+
+
 
 // Calculate factorial
 //
