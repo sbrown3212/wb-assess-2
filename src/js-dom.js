@@ -60,7 +60,25 @@ document.querySelector('#item-adder').addEventListener('dblclick', (e) => {
 // Clicking on "Turn Stuff Red" should make text red and clicking on "Turn
 // Stuff Blue" should make text blue.
 
-/// TODO: replace this with your code
+document.querySelector('#blue').addEventListener('click', (e) => {
+    const changesColors = document.querySelectorAll('.changes-colors');
+    for (const el of changesColors) {
+        el.style.color = 'blue';
+    }
+})
+
+document.querySelector('#red').addEventListener('click', (e) => {
+    const changesColors = document.querySelectorAll('.changes-colors');
+    for (const el of changesColors) {
+        el.style.color = 'red';
+    }
+})
+
+// QUESTION: Can this be done with one event listener?
+// Or does it need to be two because there are two separate button elements with different actions?
+// Would it work to add a class to the color changer buttons and assign the e.style.color to the id of the target clicked?
+// (I didn't try because we aren't supposed to edit js-dom.html)
+// It just doesn't seem very dry as I have it now.
 
 // Calculate factorial
 //
