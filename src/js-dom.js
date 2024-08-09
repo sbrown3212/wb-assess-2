@@ -136,4 +136,18 @@ document.querySelector('#factorial-calculator button').addEventListener('click',
 // the feedback text to say "The word must be at least 4 characters long." and
 // change the color of the text to red..
 
+document.querySelector('form#recommend-word button').addEventListener('click', (e) => {
+    e.preventDefault();
 
+    const input = document.querySelector('#word').value;
+    const feedback = document.querySelector('.form-feedback');
+    if (input.length >= 4) {
+        feedback.innerText = `Thanks for your submission!`;
+        feedback.style.color = `green`;
+    } else {
+        feedback.innerText = `The word must be at least 4 characters long.`;
+        feedback.style.color = `red`;
+    }
+})
+
+// QUESTION: Can the instructions be corrected? In some areas, it asks for four characters, and in other areas, it asks for three.
