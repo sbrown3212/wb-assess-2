@@ -23,7 +23,10 @@ document.querySelector('#auth').addEventListener('click', e => {
 // A user should be able to enter what they want the alert to say in the
 // text box. Then, they can submit the form to trigger the alert.
 
-/// TODO: replace this with your code
+document.querySelector('#send-alert button').addEventListener('click', (e) => {
+    // e.preventDefault(); // only necessary if the page should not reload?
+    alert(document.querySelector('#alert-message').value)
+})
 
 // Add an item
 //
