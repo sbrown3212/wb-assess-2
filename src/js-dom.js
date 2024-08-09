@@ -105,7 +105,21 @@ document.querySelector('#red').addEventListener('click', (e) => {
 //   - calls your function that calculates a factorial
 //   - puts the result of the function inside the "result" span
 
-/// TODO: replace this with your code
+function factorial(num) {
+    if (num > 1) {
+        return num * factorial(num - 1);
+    } else {
+        return 1;
+    }
+};
+
+document.querySelector('#factorial-calculator button').addEventListener('click', (e) => {
+    e.preventDefault();
+    const input = document.querySelector('#factorial-input').value;
+    document.querySelector('#result').innerText = factorial(input);
+})
+
+
 
 // Validate a form
 //
@@ -122,4 +136,4 @@ document.querySelector('#red').addEventListener('click', (e) => {
 // the feedback text to say "The word must be at least 4 characters long." and
 // change the color of the text to red..
 
-/// TODO: replace this with your code
+
