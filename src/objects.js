@@ -79,7 +79,20 @@ const EN_PIRATE_LOOKUP = {
   hello: 'ahoy',
 };
 
-function translateToPirateTalk(phrase) {}
+function translateToPirateTalk(phrase) {
+  let arr = phrase.split(` `);
+  let pirateArr = arr.map((word) => {
+    if (EN_PIRATE_LOOKUP[word]) {
+      return EN_PIRATE_LOOKUP[word];
+    } else {
+      return word;
+    }
+  });
+  return pirateArr.join(` `);
+}
+
+// const samplePhrase = 'excuse me sir where is the restroom'
+// translateToPirateTalk(samplePhrase)
 
 // Return the number of occurrences of each word in a string.
 // This function doesn't handle punctuation and is case-sensitive, so you can
